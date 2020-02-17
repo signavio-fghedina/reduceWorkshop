@@ -44,7 +44,7 @@ describe('use reduce rewrite ', () => {
             expect(sum(LIST)).toEqual(24)
         })
         it('min', () => {
-            expect(min(LIST)).toEqual(0)
+            expect(min(LIST)).toEqual(1)
         })
         it('max', () => {
             expect(max(LIST)).toEqual(4)
