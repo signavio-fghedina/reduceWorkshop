@@ -1,1 +1,1 @@
-module.exports = (list, fn) => {}
+module.exports = (list, fn) => list.reduce((acc, el) => [...acc, fn(el)], [])
