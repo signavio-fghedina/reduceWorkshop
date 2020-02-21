@@ -51,10 +51,10 @@ describe('use reduce rewrite ', () => {
             expect(max(LIST)).toEqual(4)
         })
         it('and', () => {
-            expect(and(LIST_BOOLS)).toEqual(4)
+            expect(and(LIST_BOOLS)).toEqual(false)
         })
         it('or', () => {
-            expect(or(LIST_BOOLS)).toEqual(4)
+            expect(or(LIST_BOOLS)).toEqual(true)
         })
         it('concatList', () => {
             expect(concatList([LIST, LIST])).toEqual([1, 2, 3, 4, 1, 2, 3, 4])
