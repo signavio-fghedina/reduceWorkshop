@@ -1,12 +1,12 @@
 const map = require('./map')
 const filter = require('./filter')
 const find = require('./find')
-const some = require('./find')
+const some = require('./some')
 const sum = require('./sum')
 const prod = require('./prod')
 const min = require('./min')
 const max = require('./max')
-const and = require('./or')
+const and = require('./and')
 const or = require('./or')
 const concatList = require('./concatList')
 const concatObject = require('./concatObject')
@@ -16,6 +16,7 @@ const compose = require('./compose')
 describe('use reduce rewrite ', () => {
     const LIST = [1, 2, 3, 4]
     const LIST_CHARS = ['A', 'B', 'C', 'D']
+    const LIST_BOOLS = [true, false, true, false]
     const IS_EVEN = a => a % 2 === 0
     const IS_ODD = a => a % 2 !== 0
 
@@ -41,7 +42,7 @@ describe('use reduce rewrite ', () => {
             expect(sum(LIST)).toEqual(10)
         })
         it('prod', () => {
-            expect(sum(LIST)).toEqual(24)
+            expect(prod(LIST)).toEqual(24)
         })
         it('min', () => {
             expect(min(LIST)).toEqual(1)
@@ -50,10 +51,10 @@ describe('use reduce rewrite ', () => {
             expect(max(LIST)).toEqual(4)
         })
         it('and', () => {
-            expect(and(LIST)).toEqual(4)
+            expect(and(LIST_BOOLS)).toEqual(4)
         })
         it('or', () => {
-            expect(or(LIST)).toEqual(4)
+            expect(or(LIST_BOOLS)).toEqual(4)
         })
         it('concatList', () => {
             expect(concatList([LIST, LIST])).toEqual([1, 2, 3, 4, 1, 2, 3, 4])
